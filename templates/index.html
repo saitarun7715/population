@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=number], select{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: auto;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-100 {
+  margin: auto;
+  width: 50%;
+  margin-top: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 200px) {
+  .col-100, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+<center>
+<h1 style="font-size:3vw"> Population Analysis </h1>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="container">
+ <div class="row">
+
+      <div class="col-100">
+<div id= "mydiv">
+<form action = "predict"  method = "POST">
+District_Code:<input type ="text" name = "district_code"><br/><br/>
+Neighbourhhod_code:<input type="text" name="neighborhood.code"><br/><br/>
+Gender:<input type ="radio" name ="gender" value ="Male">Male<br/> <input type ="radio" name = "gender" value ="Female">Female<br/><br/>
+Age_Group:<input type = "text" name = "age_group"><br/><br/>
+year<input type ="text" name = "year"  val min="1900" max="2021"> </br></br>
+
+<input type = "submit" value = "submit"> <br/><br/><br/>
+
+</form>
+</center>
+</div>
+</div>
+
+</body>
+</html>
