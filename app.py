@@ -7,7 +7,7 @@ import sklearn
 
 app = Flask(__name__)
 print(sklearn.__version__)
-model = pickle.load(open('picklefile.pkl', 'rb'))
+model = pickle.load(open('model\model.pkl', 'rb'))
 
 @app.route("/")
 def hello():
