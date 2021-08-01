@@ -6,7 +6,7 @@ from flask import Flask, render_template, request
 import sklearn
 
 app = Flask(__name__)
-print(sklearn.__version__)
+#print(sklearn.__version__)
 model = pickle.load(open('model\model.pkl', 'rb'))
 
 @app.route("/")
