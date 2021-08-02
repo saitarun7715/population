@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-input[type=number], select{
+input, select{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -60,7 +60,7 @@ input[type=submit]:hover {
 </head>
 <body >
 <center>
-<h1 style="font-size:4vw"> Population Analysis </h1>
+<h3> Population Analysis </h3>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="container">
  <div class="row">
@@ -68,11 +68,17 @@ input[type=submit]:hover {
       <div class="col-100">
 <div id= "mydiv">
 <form action = "predict"  method = "POST">
-District_Code:<input type ="number" name = "district_code" required  min="1" max="10"><br>
-Neighbourhhod_code:<input type="number" name="neighborhood.code" required min="1" max="70"><br>
-Gender:<input type ="radio" name ="gender" value ="Male" required>Male <input type ="radio" name = "gender" value ="Female">Female<br><br>
-Age_Group:<input type = "text" name = "age_group" required placeholder="EX: 0-4" ><br><br>
-Year:<input type ="number" name = "year"  val min="1900" max="2021" required> <br><br>
+<input type ="number" name = "district_code" placeholder="District_Code" required  min="1" max="10"><br>
+<input type="number" name="neighborhood.code" placeholder="Neighbourhhod_code" required min="1" max="70"><br>
+<div>
+  <label for="gender">Gender</label>
+  <select name="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+<input type = "text" name = "age_group"  required placeholder="Age_Group EX: 0-4" ><br><br>
+<input type ="number" name = "year"  placeholder="Year" val min="1900" max="2021" required> <br><br>
 
 <input type = "submit" value = "submit"> 
 
